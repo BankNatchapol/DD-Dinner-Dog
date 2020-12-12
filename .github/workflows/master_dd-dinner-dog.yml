@@ -25,7 +25,6 @@ jobs:
         cd frontend
         npm install
         npm build --if-present
-        npm test --if-present
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
