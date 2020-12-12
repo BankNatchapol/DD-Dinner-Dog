@@ -22,14 +22,14 @@ jobs:
 
     - name: npm install, build, and test
       run: |
-        cd frontend
         npm install
-        npm start
-        
+        npm run build --if-present
+        npm run test --if-present
+
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'dd-dinner-dog'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_898603a5b3b640d28718485d5db9da4c }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_c9ac1a038f8245d5b2353263ed2324ff }}
         package: .
