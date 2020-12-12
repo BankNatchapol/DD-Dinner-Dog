@@ -6,8 +6,6 @@ import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
 import { BrowserRouter } from 'react-router-dom';
 
-const mockStore = configureMockStore();
-const store = mockStore({});
 
 test('renders learn react link', () => {
   const { getByText } = render(
