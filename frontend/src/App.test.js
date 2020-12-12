@@ -4,6 +4,7 @@ import App from './App';
 import store from './store';
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
+import { BrowserRouter } from 'react-router-dom';
 
 const mockStore = configureMockStore();
 const store = mockStore({});
